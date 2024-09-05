@@ -1,0 +1,107 @@
+.footer
+  padding: clamp(64px, calc(64px + (80 - 64) * ((100vw - 1024px) / (1920 - 1024))), 80px) var(--g-container)
+  background-color: var( --c-bck-dark-blue)
+  color: var(--c-text-primary)
+  .block--wrapper
+    margin: 0 var(--g-footer)
+    padding: 0
+  &--contacts
+    display: flex
+    flex-direction: column
+    gap: 8px
+    @media(min-width: 769px)
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+    .block--content
+      margin-top: 0
+      padding: var(--g-32)
+      color: var(--c-surface-dark)
+      background: #fff
+      display: flex
+      flex-direction: column
+      gap: var(--g-content)
+    & > div
+      overflow: hidden
+      border-radius: var(--border-corner)
+    .block--map
+      @media(max-width: 768px)
+        aspect-ratio: 1/1
+      #map
+        width: 100%
+        max-height: 100%
+  &--row
+    display: grid
+    grid-template-columns: 1fr
+    gap: var(--g-80)
+    padding-bottom: var(--g-container)
+    @media(min-width: 992px)
+      grid-template-columns: 3fr 9fr
+    &-bottom
+      display: flex
+      justify-content: space-between
+      padding: var(--g-32) 0
+      border-top: 1px solid rgba(255, 255, 255, .7)
+      @media(max-width: 768px)
+        flex-direction: column
+
+  &--col
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: var(--g-32)
+
+  &--soc
+    margin-right: auto
+    display: flex
+    flex-direction: column
+    gap: var(--g-24)
+    .soc--list
+      display: flex
+      gap: 8px
+    .soc--link
+      padding: 10px
+      background-color: var(--accent)
+      border-radius: var(--border-corner-button)
+      font-size: var(--fs-32)
+
+  &--links
+    display: flex
+    gap: 20px 40px
+    flex-wrap: wrap
+    a
+      white-space: nowrap
+      &:hover
+        color: var(--c-text-accent-hovered)
+  &--lk
+    width: 100%
+    padding: var(--g-24)
+    background-color: var(--accent)
+    border-radius: var(--border-corner)
+    display: flex
+    flex-direction: column
+    gap: var(--g-32)
+    font-size: var(--fs-32)
+    .button
+      margin-left: auto
+      padding: 13px
+      @media(max-width: 768px)
+        padding: 9px
+      &:before
+        transition: var(--transition)
+  .developer
+    grid-column: 1
+    white-space: nowrap
+    display: inline-flex
+    a
+      filter: invert(100%)
+      display: flex
+      margin-left: 8px
+      &:hover
+        filter: invert(50%)
+      img
+        object-fit: contain
+    @media(min-width: 768px)
+      grid-column: 2
+
+  .copyright
+    color: var(--c-text-disabled)

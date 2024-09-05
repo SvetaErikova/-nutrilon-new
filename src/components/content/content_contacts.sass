@@ -1,0 +1,122 @@
+.content_contacts
+  position: relative
+  @media(min-width: 768px)
+    padding-bottom: 0
+    &:before
+      content: ''
+      position: absolute
+      background-image: url("../img/contacts/contacts-lens-circular.png")
+      background-repeat: no-repeat
+      background-position: left
+      background-size: cover
+      height: auto
+      width: 40.885vw
+      mix-blend-mode: screen
+      bottom: 30%
+      pointer-events: none
+      aspect-ratio: 785/  1190
+  &:after
+    content: ''
+    position: absolute
+    background-image: url("../img/contacts/contacts-blick-mob.png")
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    height: 120%
+    width: 100%
+    mix-blend-mode: screen
+    top: -45%
+    pointer-events: none
+    @media(min-width: 768px)
+      background-image: url("../img/contacts/contacts-blick.png")
+      top: 0
+      background-position: top
+      height: 100%
+
+  .contacts
+
+    display: flex
+    flex-direction: column
+
+    @media(min-width: 998px)
+      gap: 20px
+      display: grid
+      grid-template-columns: repeat(12, 1fr)
+    &--image
+      grid-column: span 6
+      position: relative
+      display: flex
+      justify-content: center
+      z-index: 1
+      img
+        object-fit: contain
+        object-position: center bottom
+        width: 95%
+        position: relative
+        margin-bottom: -8px
+        max-width: 543px
+        @media(min-width: 998px)
+          position: absolute
+          width: 125%
+          left: -7%
+          bottom: 8px
+          max-width: inherit
+
+        @media(min-width: 1550px)
+          width: 160%
+          left: -34%
+
+    &--content
+      max-width: 543px
+      grid-column: span 6
+      background-color: #FFFFFF
+      border-radius: 24px
+      padding: 28px 20px
+      display: flex
+      flex-direction: column
+      gap: 20px
+      z-index: 1
+      position: relative
+      margin: auto
+      @media(min-width: 998px)
+        padding: 40px 32px
+        margin: 74px 0 40px
+        margin-left: auto
+    &--title
+      h3
+        font-size: 32px
+        line-height: 1.1
+        @media(min-width: 768px)
+          font-size: 36px
+          line-height: 1.2
+
+    &--text
+      line-height: 1.2
+      font-size: 20px
+    &--tel a
+      display: flex
+      justify-content: center
+      align-items: center
+      gap: 8px
+      font-size: 24px
+      font-weight: 700
+      @media(min-width: 575px)
+        justify-content: flex-start
+        font-size: 32px
+      .icon-phone
+        width: 64px
+        height: auto
+        aspect-ratio: 1/1
+        background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M41.4252 51.9943C38.5403 51.8882 30.3645 50.7585 21.8021 42.1998C13.2416 33.639 12.1137 25.4669 12.0055 22.5806C11.8452 18.1821 15.2149 13.9097 19.1075 12.2412C19.5762 12.0389 20.0896 11.9618 20.5971 12.0177C21.1046 12.0735 21.5889 12.2603 22.0024 12.5597C25.2078 14.8952 27.4195 18.4284 29.3188 21.2066C29.7366 21.8169 29.9153 22.5597 29.8207 23.2933C29.7261 24.0269 29.3649 24.7 28.8059 25.1845L24.8973 28.0868C24.7084 28.2231 24.5755 28.4233 24.5232 28.6503C24.4709 28.8772 24.5027 29.1154 24.6128 29.3206C25.4983 30.929 27.073 33.3246 28.876 35.1273C30.6791 36.9299 33.1893 38.6084 34.9102 39.5939C35.126 39.715 35.38 39.7488 35.6199 39.6885C35.8599 39.6281 36.0676 39.4782 36.2004 39.2694L38.7447 35.3977C39.2125 34.7764 39.9025 34.3603 40.6703 34.2363C41.4381 34.1123 42.2241 34.2902 42.8637 34.7327C45.6824 36.6836 48.972 38.8568 51.38 41.9394C51.7038 42.3558 51.9098 42.8515 51.9764 43.3748C52.043 43.898 51.9678 44.4296 51.7587 44.9138C50.0819 48.8256 45.8387 52.1566 41.4252 51.9943Z' fill='%230124A3'/%3E%3C/svg%3E%0A")
+        background-repeat: no-repeat
+        background-size: contain
+    &--actions
+      margin-top: 24px
+      display: flex
+      gap: 16px
+      @media(max-width: 575px)
+        margin-top: 16px
+        flex-direction: column
+        .button
+          width: 100%
+

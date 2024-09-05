@@ -1,0 +1,67 @@
+.accordion
+  position: relative
+  overflow: hidden
+  box-shadow: 0px 4px 21.8px 0px #8EB6DC59
+  background-color: #FFFFFF
+  padding: 36px 44px
+  cursor: pointer
+  border-radius: var(--border-corner)
+  z-index: 1
+  @media(max-width: 768px)
+    padding: 24px 20px
+  & + .accordion
+    border-top: 1px solid var(--border-muted)
+  &:hover,
+  &:focus
+    .accordion--button
+      color: var(--neutral-hover)
+  &.is_open
+    .accordion--content
+      pointer-events: auto
+      grid-template-rows: 1fr
+      opacity: 1
+      margin-top: 14px
+    .icon
+      transform: scaleY(-1)
+      transform-origin: center
+  &--button
+    transition: var(--transition)
+
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    position: relative
+    gap: 24px
+    .accordion--button_text
+      transition: var(--transition)
+      font-size: clamp(18px, calc(18px + (24 - 18) * ((100vw - 1024px) / (1920 - 1024))), 24px)
+      font-weight: 700
+      display: flex
+      justify-content: space-between
+      gap: 20px
+      width: 100%
+    .icon
+      align-items: center
+      justify-content: center
+      height: 24px
+      width: 24px
+      min-width: 24px
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M11.9992 18C11.5992 18 11.1992 17.8 10.9992 17.6L4.39922 11C3.79922 10.4 3.79922 9.4 4.39922 8.8C4.99922 8.2 5.99922 8.2 6.59922 8.8L11.9992 14.2L17.3992 8.8C17.9992 8.2 18.9992 8.2 19.5992 8.8C20.1992 9.4 20.1992 10.4 19.5992 11L13.1992 17.4C12.7992 17.8 12.3992 18 11.9992 18Z' fill='%230124A3'/%3E%3C/svg%3E")
+      background-repeat: no-repeat
+      background-size: contain
+      transform: scaleY(1)
+      transition: var(--transition)
+      display: inline-block
+  &--content
+    opacity: 0
+    display: grid
+    grid-template-rows: 0fr
+    pointer-events: none
+    overflow: hidden
+    transition: grid-template-rows 0.21s ease-out
+    .is_cascade
+      width: 100%
+      overflow: hidden
+      & > *
+        margin-top: 16px
+        line-height: 1.4

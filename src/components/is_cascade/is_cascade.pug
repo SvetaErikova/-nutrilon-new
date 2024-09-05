@@ -1,0 +1,97 @@
+.is_cascade
+  h1 Заголовок первого уровня
+  figure
+    img(src="/assets/img/bg.jpg")
+  h2 Заголовок второго уровня
+  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum inventore placeat ratione voluptatum. Explicabo, nulla.
+  p <strong>Lorem ipsum:</strong> dolor sit amet, consectetur adipisicing elit. Consequatur iste iure, molestiae nihil perferendis possimus praesentium quasi reprehenderit sed sunt tempore vero!
+  h3 Заголовок
+  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur iste iure, molestiae nihil perferendis possimus praesentium quasi reprehenderit sed sunt tempore vero!
+    a(href="" target="_blank") ссылка
+  ul
+    li Lorem ipsum dolor sit amet, consectetur.
+    li Lorem ipsum dolor sit amet, consectetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque explicabo optio placeat quisquam velit. Ad dignissimos est fugit, in maiores minima modi numquam quasi qui!
+    li Lorem ipsum dolor sit amet, consectetur.
+  ol
+    li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati, perferendis?
+    li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, sequi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus facere nam possimus quam rem sequi.
+    li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, provident!
+  figure
+    img(src="/assets/img/2.jpg")
+    figcaption Вертикальная картинка
+  figure
+    img(src="/assets/img/1.jpg")
+    figcaption Квадратная картинка
+  figure
+    video(src="/assets/video/@lepragram.mp4" controls)
+  blockquote
+    p  И таких моментов в Paranormasight: The Seven Mysteries of Honjo множество. Благодаря правильной подаче, работе со звуком, точечным скримерам в этой визуальной новелле страшнее, чем во многих других хоррорах. И это очень аутентичный, истинно японский ужастик.
+    span Lucius Annaeus Sĕnĕca minor
+  strong
+  .is_cascade--accordion
+    +accordion-list("Общие советы","Вы можете получить консультацию по указанным на сайте телефонам. Отдел бронирования работает с 09:00-17:00, кроме выходных и праздничных дней. В сезон круглосуточно работает дежурный администратор.")
+    +accordion-list("Общие советы","Вы можете получить консультацию по указанным на сайте телефонам. Отдел бронирования работает с 09:00-17:00, кроме выходных и праздничных дней. В сезон круглосуточно работает дежурный администратор.")
+    +accordion-list("Общие советы","Вы можете получить консультацию по указанным на сайте телефонам. Отдел бронирования работает с 09:00-17:00, кроме выходных и праздничных дней. В сезон круглосуточно работает дежурный администратор.")
+    +accordion-list("Общие советы","Вы можете получить консультацию по указанным на сайте телефонам. Отдел бронирования работает с 09:00-17:00, кроме выходных и праздничных дней. В сезон круглосуточно работает дежурный администратор.")
+
+  .button_wrapper
+    a.button.button-filled.button-accent(href="")
+      span Схема отеля
+    a.button.button-outlined.button-accent(href="")
+      span Как добраться
+  .is_cascade--slider
+    .gallery.js-gallerySwiper
+      +gallery--item("/assets/img/1.jpg", "")
+      +gallery--item("/assets/img/1.jpg", "")
+      +gallery--item("/assets/img/1.jpg", "")
+      +gallery--item("/assets/img/1.jpg", "")
+      +gallery--item("/assets/img/1.jpg", "")
+  .is_cascade--table
+    table
+      thead
+        tr
+          td Услуга
+          td Цена
+          td Место
+          td Для детей
+      tbody
+        tr
+          td Программа 1
+          td 1200
+          td Медицинский центр
+          td Да
+        tr
+          td Программа 2
+          td 1300
+          td SPA
+          td Нет
+  section.block.block_list
+    .block--wrapper
+      +block--head("subtitle","Базовые карточки грид","Все остальные карточки и карточки которым не прописан тип контента")
+      .block--sections
+        a.is_active(href="" data-section_id="") Все
+        a(href="" data-section_id="") Номера
+        a(href="" data-section_id="") Рестораны и бары
+        a(href="" data-section_id="") Spa и бассейны
+      .block--elements
+        +card--link
+        +card--popup
+        +card--simple
+        +card--link
+        .block--pagination
+          a.button.button-outlined.button-secondary(href="/") Показать еще
+
+  section.block.block_list.block_list-slider
+    .block--wrapper
+      +block--head("subtitle","Базовые карточки слайдер","Все остальные карточки и карточки которым не прописан тип контента")
+      .block--sections
+        a.is_active(href="" data-section_id="") Все
+        a(href="" data-section_id="") Номера
+        a(href="" data-section_id="") Рестораны и бары
+        a(href="" data-section_id="") Spa и бассейны
+      .block--elements
+        +card--link
+        +card--popup
+        +card--simple
+        +card--link
+        +card--popup

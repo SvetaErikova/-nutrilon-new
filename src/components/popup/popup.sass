@@ -1,0 +1,104 @@
+.popup
+  padding: 40px 0
+  overscroll-behavior: contain
+  background-color: var(--others-fog, rgba(20, 26, 37, 0.45))
+  @media(max-width: 768px)
+    padding: 25px 8px 70px
+    height: -webkit-fill-available
+    height: calc(100 * var(--vh, 1vh))
+    max-height: calc(100 * var(--vh, 1vh))
+  &--content
+    background-color: #fff
+    padding: 44px 20px
+    width: 100%
+    border-radius: var(--border-corner)
+    max-width: 420px
+    height: 100%
+    &-title
+      position: relative
+      font-size: 24px
+      margin-bottom: 24px
+    &-buttons
+      margin-top: 32px
+      display: flex
+      flex-direction: column
+      gap: 16px
+      .button
+        width: 100%
+  &--close
+    display: flex
+    align-items: center
+    justify-content: center
+    position: absolute
+    top: 0
+    right: 0
+    z-index: 42
+    cursor: pointer
+    transition: 0.3s ease-out
+    color: var(--c-text-subdued)
+    .icon-close
+      aspect-ratio: 1/1
+      width: 22px
+      height: auto
+      background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.5' d='M11 8.64502L19.25 0.39502L21.6066 2.75169L13.3566 11.0017L21.6066 19.2517L19.2483 21.6084L10.9983 13.3584L2.74998 21.6084L0.393311 19.25L8.64331 11L0.393311 2.75002L2.74998 0.396686L11 8.64502Z' fill='%230326A3'/%3E%3C/svg%3E%0A")
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center
+    .button
+      padding: 7px
+      border: none
+
+.popup[data-popup='popup_advantages']
+  .advantages--content
+    display: flex
+    flex-direction: column
+    gap: 20px
+    .item
+      display: flex
+      //grid-template-columns: 100px auto
+      align-items: center
+      gap: 16px
+      &--image
+        max-width: 100px
+        order: -1
+        img
+          scale: 1.5
+      &--content
+      .item--title
+        font-size: 14px
+        font-weight: 800
+      .item--subtitle
+        font-size: 12px
+        margin-top: 4px
+  .advantages--note
+    margin-top: 24px
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    gap: 16px
+    font-weight: 700
+    font-size: 14px
+    &_item
+      display: flex
+      flex-direction: row-reverse
+      align-items: center
+      gap: 8px
+.popup[data-popup="popup_for_filters"]
+  .popup--content
+
+    display: flex
+    flex-direction: column
+  .block--filter
+    .item
+      display: flex
+      &--list
+        flex-wrap: wrap
+  .popup--action
+    margin-top: auto
+    width: 100%
+    .button
+      width: 100%
+.popup.is_active
+  .select--option_wrapper
+    pointer-events: auto
+

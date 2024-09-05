@@ -1,0 +1,61 @@
+mixin block--head(subtitle, title, caption)
+  .block--head
+    .block--head_subtitle
+      p=subtitle
+    .block--head_title
+      h2.f-h2= title
+    .block--head_caption
+      p=caption
+    .block--actions
+      a(href="/").button.button-filled.button-accent.button-dark
+        span Действие
+      a(href="/").button.button-filled.button-primary
+        span Переход
+
+mixin block--head-h3(subtitle, title, caption)
+  .block--head
+    .block--head_subtitle
+      p=subtitle
+    .block--head_title
+      h2.f-h3= title
+    .block--head_caption
+      p=caption
+    .block--actions
+      a(href="/").button.button-filled.button-accent.button-dark
+        span Действие
+      a(href="/").button.button-filled.button-primary
+        span Переход
+mixin block--head-h4(subtitle, title, caption)
+  .block--head
+    .block--head_subtitle
+      p=subtitle
+    .block--head_title
+      h3.f-h4= title
+    .block--head_caption
+      p=caption
+    .block--actions
+      a(href="/").button.button-filled.button-accent.button-dark
+        span Действие
+      a(href="/").button.button-filled.button-primary
+        span Переход
+mixin block--head_h1(subtitle, title, caption)
+  .block--head
+    .block--head_subtitle
+      p=subtitle
+    .block--head_title
+      h1.f-h1= title
+    .block--head_caption
+      p=caption
+
+
+mixin block--head_title_link(subtitle, title, caption)
+  .block--head
+    .block--head_subtitle
+      p=subtitle
+    .block--head_title
+      a(href="/")
+        h2.f-h2= title
+    .block--head_caption
+      p=caption
+
+

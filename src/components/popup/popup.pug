@@ -1,0 +1,40 @@
+.popup(data-popup="popup_for_filters")
+  .popup--content
+    .popup--content-title
+      h3 Фильтр
+      .popup--close(data-closepopup)
+        button.button.button-link.button-primary
+          span.icon-close
+    .block--filter
+      .item.js-tabs
+        .item--title
+          p Тип
+        .item--list
+          .button.is_active(data-type='')
+            span Все
+          .button(data-type='mix')
+            span Смесь
+          .button(data-type='porridge')
+            span Каша
+      .item.js-tabs
+        .item--title
+          p Возраст
+        .item--list
+          button.button.is_active(data-age='')
+            span Все
+          button.button(data-age='0')
+            span 0+
+          button.button(data-age='6')
+            span 6+
+          button.button(data-age='12')
+            span 12+
+          button.button(data-age="18")
+            span 18+
+          button.button(data-age='first')
+            span Первая ложка
+    .popup--action
+      .button.button-filled.button-accent(data-closepopup)
+        span Применить
+
+
+

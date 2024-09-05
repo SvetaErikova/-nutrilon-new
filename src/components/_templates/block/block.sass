@@ -1,0 +1,37 @@
+.block
+  padding: 30px 0
+  @media(min-width: 768px)
+    padding: 60px 0
+  &--wrapper
+    max-width: 1156px
+    margin: 0 auto
+    @media(max-width: 1240px)
+      max-width: 100%
+      padding: 0 16px
+    @media(max-width: 768px)
+      padding: 0 8px
+
+
+
+  &--content,
+  &--elements
+    margin-top: var(--g-section-inner)
+
+main .block:first-child
+  .block--wrapper
+    padding-top: 0
+.section-one
+  position: relative
+  background: linear-gradient(180deg, #ACCAE9 13.55%, #E9F1F9 49.31%, #C9DFF3 59.7%, #ACCAE9 75.2%, #D7E5F4 92.88%, #FEFEFF 100%)
+  @media(min-width: 998px)
+    background: linear-gradient(180deg, #ACCAE9 13.55%, #E9F1F9 49.31%, #C9DFF3 59.7%, #ACCAE9 72.27%, #D4E4F4 91.7%, #FEFEFF 100%)
+
+.section-two
+  background: linear-gradient(180deg, #FFFFFF 4.58%, #FFFFFF 22%, #D4E7F8 80.71%, #EFF6FD 100%)
+  @media(min-width: 998px)
+    background: linear-gradient(180deg, #FFFFFF 24%, #D4E7F8 74%, #FFFFFF 100%)
+
+.section-three
+  background: linear-gradient(180deg, #EFF6FD 0%, #FFFFFF 25.82%, #D4E7F8 48%, #D9EDFF 64%)
+  @media(min-width: 998px)
+    background: linear-gradient(180deg, #FFFFFF 0%, #C8E4FF 100%)

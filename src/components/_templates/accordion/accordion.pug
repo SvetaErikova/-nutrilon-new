@@ -1,0 +1,11 @@
+mixin accordion-list(title, text)
+  .accordion
+    .accordion--button
+      p.accordion--button_text=title
+      span.icon-plus
+
+    .accordion--content.is_cascade
+      .accordion--content-container
+        p=text
+          a(href="/") ccылка
+        p=text

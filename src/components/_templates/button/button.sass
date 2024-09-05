@@ -1,0 +1,110 @@
+/* Common styles for button */
+.button
+  position: relative
+  display: flex
+  align-items: center
+  width: fit-content
+  gap: 4px
+  flex-shrink: 0
+  font-size: clamp(16px, calc(16px + (20 - 16) * ((100vw - 1024px) / (1920 - 1024))), 20px)
+  line-height: 1.55
+  font-weight: 400
+  letter-spacing: -0.02em
+  border: 1px solid transparent
+  cursor: pointer
+  z-index: 1
+  overflow: hidden
+  transition: var(--transition)
+  span
+    color: inherit
+    line-height: 1
+    text-align: center
+    z-index: 2
+    white-space: nowrap
+    letter-spacing: -2%
+    font-weight: 700
+
+
+/* Button appearance */
+
+.button.button-filled
+  background: var(--filled-bgc-base)
+  border-color: var(--filled-bc-base)
+  color: var(--filled-c-base)
+  border-radius: 16px
+  justify-content: center
+
+  &:hover,
+  &:focus,
+  &:active
+    border-color: var(--filled-bc-hover)
+    color: var(--filled-c-hover)
+    background: var(--filled-bgc-hover)
+
+
+.button.button-outlined
+  background-color: transparent
+  border-color: var(--outlined-bc-base)
+  color: var(--outlined-c-base)
+  border-radius: 16px
+  align-items: center
+  justify-content: center
+  &:hover,
+  &:focus,
+  &:active
+    border-color: var(--outlined-bgc-hover)
+    color: var(--outlined-c-hover)
+    background: var(--outlined-bgc-hover)
+
+.button.button-outlined,
+.button.button-filled
+  padding: 16px 20px
+  @media(min-width: 1024px)
+    padding: 20px 24px
+
+/* Button  colors  */
+
+.button.button-accent
+  --filled-bgc-base: #0124A3
+  --filled-bc-base: #0124A3
+  --filled-c-base: #fff
+  --filled-bgc-hover: #0037B9
+  --filled-bc-hover: #0037B9
+  --filled-c-hover: #fff
+
+  --outlined-bc-base: #0124A3
+  --outlined-c-base: #0124A3
+  --outlined-bgc-hover: #0124A3
+  --outlined-c-hover: #fff
+
+
+.button.button-primary
+  --filled-bgc-base: #EBF2FF
+  --filled-bc-base: #EBF2FF
+  --filled-c-base: #0124A3
+  --filled-bgc-hover: #CFE0FF
+  --filled-bc-hover: #CFE0FF
+  --filled-c-hover: #0124A3
+
+  --outlined-bc-base: #8499E5
+  --outlined-c-base: #0124A3
+  --outlined-bgc-hover: #EBF2FF
+  --outlined-c-hover: #fff
+
+.button.button-secondary
+  --filled-bgc-base: #FFFFFF
+  --filled-bc-base: #FFFFFF
+  --filled-c-base: var(--accent)
+  --filled-bgc-hover: #E0E7F3
+  --filled-bc-hover: #E0E7F3
+  --filled-c-hover: var(--accent)
+
+  --outlined-bc-base: #FFFFFF
+  --outlined-c-base: var(--accent)
+  --outlined-bc-hover: #FFFFFF
+  --outlined-bgc-hover: #FFFFFF
+  --outlined-c-hover: var(--accent)
+
+
+
+

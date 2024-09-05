@@ -1,0 +1,444 @@
+.content_advantages-2,
+.content_advantages-1
+  position: relative
+  overflow-x: clip
+  .advantages
+    display: flex
+    flex-direction: column
+    gap:  0 20px
+    position: relative
+    @media(min-width: 768px)
+      display: grid
+      grid-template-columns: repeat(12, 1fr)
+      align-items: center
+    &--content
+      @media(max-width: 767px)
+        display: flex
+        flex-direction: column
+        gap: 20px
+        background-color: #fff
+        border-radius: 16px
+        padding: 20px
+        z-index: 1
+        max-width: 359px
+        margin: auto
+      .item
+        display: grid
+        align-items: center
+        &--title
+          font-weight: 700
+          font-size: clamp(14px, calc(14px + (20 - 14) * ((100vw - 375px) / (1240 - 375))), 20px)
+        &--subtitle
+          margin-top: 8px
+          color: #4862B0
+          font-size: clamp(12px, calc(12px + (16 - 12) * ((100vw - 375px) / (1240 - 375))), 16px)
+        &--image
+          position: relative
+          aspect-ratio: 1/1
+          display: flex
+          max-width: 90px
+          &:after
+            @media(min-width: 768px)
+              content: ''
+              position: absolute
+              top: 50%
+              translate: -50% -50%
+              aspect-ratio: 230/130
+              width: 230px
+              left: 50%
+              background-image: url("../img/advantages-png/flare.png")
+              background-repeat: no-repeat
+              background-position: center
+              background-size: contain
+              pointer-events: none
+          img
+            object-fit: contain
+            aspect-ratio: 1/1
+            scale: 2.2
+            width: 100%
+            height: auto
+            position: relative
+            z-index: 2
+        @media(min-width: 998px) and (max-width: 1920px)
+          grid-template-columns:  4.38vw 1fr
+          &--title
+            font-size: 1.04vw
+          &--subtitle
+            font-size: 0.83vw
+          &--subtitle
+            margin-top: 1.04vw
+    &--image
+      position: relative
+      z-index: 2
+      aspect-ratio: 534/760
+      display: flex
+      margin: auto
+      max-width: 62.13%
+      @media(max-width: 767px)
+        order: -1
+      @media(min-width: 998px)
+        max-width: 27.81vw
+
+
+
+    &--note
+      display: none
+      max-width: 785px
+      margin: auto
+      @media(min-width: 768px)
+        margin-top: -20px
+        grid-column: span 12
+        display: flex
+      &_item
+        font-weight: 700
+        font-size: clamp(16px, calc(16px + (20 - 16) * ((100vw - 1024px) / (1920 - 1024))), 20px)
+        padding: clamp(16px, calc(16px + (24 - 16) * ((100vw - 1024px) / (1920 - 1024))), 24px) clamp(14px, calc(14px + (20 - 14) * ((100vw - 1024px) / (1920 - 1024))), 20px)
+        display: flex
+        gap: 1.04vw
+        white-space: nowrap
+  .advantages--note-mob
+    display: none
+    @media(max-width: 768px)
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      gap: 16px
+      margin-top: 12px
+      .advantages--note_item
+        align-items: center
+        gap: 8px
+        padding: 0
+        span
+          font-size: 14px
+
+
+.advantages--note
+  &-icon
+    width: clamp(24px, calc(24px + (32 - 24) * ((100vw - 1024px) / (1920 - 1024))), 32px)
+    aspect-ratio: 1/1
+    background-position: center
+    background-repeat: no-repeat
+    background-size: contain
+    &-1
+      background-image: url("data:image/svg+xml,%3Csvg width='33' height='33' viewBox='0 0 33 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.8'%3E%3Cpath d='M16.0655 13.7788C16.4744 14.1603 16.8571 14.5495 17.2151 14.9449L17.6319 14.5282C17.1936 14.2469 16.7304 13.9795 16.2413 13.7277H18.4323L21.051 11.1091C19.2484 11.2358 17.9108 11.9589 17.0545 12.6695L23.7768 5.32103C22.7091 5.2325 19.9878 5.55326 17.8764 7.86131C16.8239 9.01178 16.3115 10.2314 16.0952 11.2848C15.879 10.2314 15.3666 9.01178 14.3141 7.86131C12.2027 5.55326 9.48133 5.2325 8.41362 5.32103L15.4225 12.9827C14.4293 12.1085 12.6484 11.051 10.244 11.051C7.115 11.051 5.24735 12.8419 4.71429 13.6892H15.3122C14 13.8049 11.9356 14.3837 10.2568 16.2188C8.14537 18.5268 8.20756 21.1129 8.47353 22.0778L16.0655 13.7788Z' fill='%230124A3'/%3E%3Cpath d='M17.5853 18.512L15.5167 20.5806C15.7776 20.8208 16.126 20.9675 16.5087 20.9675C17.3174 20.9675 17.973 20.3123 17.973 19.504C17.973 19.1212 17.826 18.7728 17.5853 18.512Z' fill='%230124A3'/%3E%3Cpath d='M12.7547 23.3425L14.4527 21.6446C15.1393 21.7656 15.6609 22.3648 15.6609 23.0858C15.6609 23.8941 15.0053 24.5493 14.1966 24.5493C13.4755 24.5493 12.8762 24.0284 12.7547 23.3425Z' fill='%230124A3'/%3E%3Cpath d='M19.8493 16.248L18.9365 17.1607C21.3388 20.7949 22.0357 24.6868 22.0357 27.766H24.7331C24.7331 24.3765 23.5834 19.7356 19.8493 16.248Z' fill='%230124A3'/%3E%3Cpath d='M22.3695 13.7277H27.4691C27.0415 13.1747 26.0096 12.2196 24.4744 11.6229L22.3695 13.7277Z' fill='%230124A3'/%3E%3Cpath d='M20.2851 23.0858C20.2851 23.8941 19.6295 24.5493 18.8208 24.5493C18.0121 24.5493 17.3565 23.8941 17.3565 23.0858C17.3565 22.2775 18.0121 21.6223 18.8208 21.6223C19.6295 21.6223 20.2851 22.2775 20.2851 23.0858Z' fill='%230124A3'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M33 16.5C33 25.6127 25.6127 33 16.5 33C7.3873 33 0 25.6127 0 16.5C0 7.3873 7.3873 0 16.5 0C25.6127 0 33 7.3873 33 16.5ZM1.37354 16.5C1.37354 20.6771 3.06663 24.4587 5.80398 27.196L27.196 5.80399C24.4587 3.06663 20.6771 1.37354 16.5 1.37354C8.14589 1.37354 1.37354 8.14589 1.37354 16.5ZM28.2653 6.992L6.99201 28.2653C9.58988 30.3674 12.8979 31.6265 16.5 31.6265C24.8541 31.6265 31.6265 24.8541 31.6265 16.5C31.6265 12.8979 30.3674 9.58989 28.2653 6.992Z' fill='%230124A3'/%3E%3C/g%3E%3C/svg%3E%0A")
+    &-2
+      background-image: url("data:image/svg+xml,%3Csvg width='26' height='27' viewBox='0 0 26 27' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.8' d='M23.436 5.07921C24.8521 5.07921 26 3.94219 26 2.5396C26 1.13702 24.8521 0 23.436 0C22.0199 0 20.872 1.13702 20.872 2.5396C20.872 3.05675 21.028 3.53779 21.296 3.93905L17.8798 8.34497C17.0394 7.90959 16.0833 7.66337 15.0692 7.66337C13.8674 7.66337 12.7472 8.00914 11.8044 8.60572L10.7566 7.32902C11.1772 6.76111 11.4256 6.06028 11.4256 5.30198C11.4256 3.40726 9.87487 1.87129 7.96194 1.87129C6.04901 1.87129 4.49827 3.40726 4.49827 5.30198C4.49827 7.1967 6.04901 8.73267 7.96194 8.73267C8.45687 8.73267 8.92756 8.62985 9.35341 8.4446L10.4469 9.77707C9.54249 10.8273 8.99654 12.1896 8.99654 13.6782C8.99654 14.4783 9.15425 15.2419 9.44057 15.9402L7.10595 17.349C6.35787 16.544 5.28512 16.0396 4.09343 16.0396C1.83269 16.0396 0 17.8548 0 20.0941C0 22.3333 1.83269 24.1485 4.09343 24.1485C6.35416 24.1485 8.18685 22.3333 8.18685 20.0941C8.18685 19.6761 8.12301 19.273 8.00447 18.8937L10.3578 17.4735C11.4713 18.828 13.1683 19.6931 15.0692 19.6931C15.8849 19.6931 16.663 19.5338 17.3735 19.2449L18.6989 21.2779C18.1482 21.8854 17.8131 22.6886 17.8131 23.5693C17.8131 25.464 19.3639 27 21.2768 27C23.1897 27 24.7405 25.464 24.7405 23.5693C24.7405 21.6746 23.1897 20.1386 21.2768 20.1386C20.9034 20.1386 20.5438 20.1971 20.2068 20.3055L18.919 18.3302C20.2761 17.2271 21.1419 15.5528 21.1419 13.6782C21.1419 12.0024 20.4499 10.4866 19.3336 9.39593L22.7516 4.98774C22.9695 5.04736 23.199 5.07921 23.436 5.07921Z' fill='%230124A3'/%3E%3C/svg%3E%0A")
+    &-3
+      background-image: url("data:image/svg+xml,%3Csvg width='32' height='29' viewBox='0 0 32 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.8'%3E%3Cpath d='M7.87591 2.28753L3.93795 0L0 2.28753V6.8626L3.93795 9.15013L7.87591 6.8626V2.28753Z' fill='%230124A3'/%3E%3Cpath d='M7.78837 29C10.1174 29 12.0055 27.1003 12.0055 24.757C12.0055 22.4137 10.1174 20.514 7.78837 20.514C5.45932 20.514 3.57125 22.4137 3.57125 24.757C3.57125 27.1003 5.45932 29 7.78837 29Z' fill='%230124A3'/%3E%3Cpath d='M27.1871 2.28753L32 5.80574L30.1616 11.4983H24.2126L22.3743 5.80574L27.1871 2.28753Z' fill='%230124A3'/%3E%3Cpath d='M15.3058 2.73028C14.5354 4.52395 13.3384 5.95296 12.1885 7.32591C10.5066 9.33392 8.92516 11.222 8.92516 13.9556C8.92516 18.5583 12.3404 20.145 15.3058 20.145C18.2713 20.145 21.6865 18.5583 21.6865 13.9556C21.6865 11.222 20.1051 9.33392 18.4232 7.32591C17.2732 5.95296 16.0763 4.52395 15.3058 2.73028Z' fill='%230124A3'/%3E%3C/g%3E%3C/svg%3E%0A")
+
+.content_advantages-1
+  @media(min-width: 998px)
+    position: absolute
+    top: 60%
+    left: 50%
+    translate: -50% -50%
+    width: 100%
+  .advantages
+    @media(min-width: 998px)
+      opacity: 0
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      height: 100%
+      width: 105vw
+      left: 50%
+      mix-blend-mode: screen
+      background-image: url("../img/advantages-1/lens-mob.png")
+      background-repeat: no-repeat
+      background-size: contain
+      translate: -50% 0
+      pointer-events: none
+      @media(min-width: 768px)
+        width: 100%
+        left: -2%
+        top: 2%
+        background-image: url("../img/advantages-1/lens.png")
+        background-size: contain
+        background-position: center top
+        translate: 0 0
+        opacity: 0.8
+        aspect-ratio: 1156 / 760
+    &--content
+      flex-direction: column
+      @media(min-width: 768px)
+        grid-column: 7 / span 6
+        gap:  16px
+        display: flex
+        padding: 3.13vw 0
+        @media(min-width: 998px)
+          gap:  clamp(0px, calc(0px + (30 - 0) * ((100vw - 1240px) / (1920 - 1240))), 30px)
+      @media(max-width: 1920px)
+    .item
+      grid-template-columns:  56px 1fr
+      gap: 20px
+      z-index: 2
+      @media(min-width: 768px)
+        grid-template-columns:  6vw 1fr
+      @media(min-width: 998px)
+        padding: 20px 0
+        grid-template-columns:  4.38vw 1fr
+      &:nth-child(1)
+
+        @media(min-width: 768px)
+          margin-left: -12%
+      &:nth-child(2)
+      &:nth-child(3)
+        @media(min-width: 768px)
+          margin-left: 10%
+      &:nth-child(4)
+        @media(max-width: 767px)
+          padding: 20px 0
+    &--image
+      grid-column: span 6
+      z-index: 3
+
+      @media(min-width: 998px) and (max-width: 1600px)
+        margin: 0 2rem  0 auto
+
+
+.content_advantages-2
+  @media(min-width: 998px)
+    margin-top: -10%
+  .advantages
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      height: 100%
+      width: 105vw
+      left: 50%
+      translate: -50% 0
+      mix-blend-mode: screen
+      background-image: url("../img/advantages-2/lens-mob.png")
+      background-repeat: no-repeat
+      background-position: center
+      background-size: cover
+      pointer-events: none
+      @media(min-width: 768px)
+        width: 100%
+        background-image: url("../img/advantages-2/lens.png")
+        background-size: contain
+
+    &--content
+      flex-direction: column
+      @media(min-width: 768px)
+        grid-column: span 6
+        gap: 75px
+        padding: 60px 0
+        display: flex
+        max-width: 540px
+      .item
+        grid-template-columns: 56px auto
+        gap: 20px
+        @media(min-width: 768px)
+          justify-content: end
+          justify-items: end
+          grid-template-columns: 1fr 6vw
+        @media(min-width: 998px)
+          grid-template-columns: 1fr  4.38vw
+        .item--content
+          max-width: 281px
+          @media(max-width: 767px)
+            grid-column: 2
+        .item--image
+          @media(max-width: 767px)
+            grid-column: 1
+            grid-row: 1
+          img
+            position: relative
+            z-index: 2
+        &:nth-child(1)
+          @media(min-width: 768px)
+            position: relative
+            left: -4px
+            top: -11px
+          .item--content
+            @media(min-width: 998px)
+              position: relative
+              right: -20px
+        &:nth-child(2)
+          @media(min-width: 768px)
+            position: relative
+            left: -50px
+        &:nth-child(3)
+          @media(min-width: 768px)
+            position: relative
+            top: 23px
+    &--image
+      grid-column: span 6
+      @media(min-width: 1026px)
+        margin: initial
+
+.content_advantages
+  position: relative
+  @media(min-width: 768px) and (max-width: 998px)
+    margin-bottom: 130px
+  .block--wrapper
+    @media(min-width: 768px) and (max-width: 1920px)
+      max-width: 27.40vw
+  .image--lens
+    display: none
+    @media(min-width: 768px)
+      display: block
+      left: 30%
+      top: 25%
+      position: absolute
+      z-index: 0
+      opacity: 0.7
+      width: 100%
+      height: 100%
+      img
+        object-fit: contain
+        object-position: right bottom
+  .image--helix
+    position: absolute
+    translate: -50% -50%
+    aspect-ratio: 1920/1156
+    top: 30vw
+    left: 50%
+    width: 100vw
+    height: auto
+    z-index: 0
+    @media(min-width: 768px)
+      top: 50%
+      left: 50%
+      width: 100vw
+      max-width: 1920px
+
+  .block--content
+    position: relative
+    max-width: 1200px
+    margin: auto
+  .block--image
+    max-width: 54.13vw
+    margin: auto
+    position: relative
+    z-index: 2
+    @media(min-width: 768px)
+      max-width: 526px
+      width: 27.81vw
+
+  .advantages
+    display: none
+    @media(min-width: 768px)
+      position: absolute
+      translate: -50% 0%
+      width: 100%
+      top: 0
+      left: 50%
+      display: grid
+      grid-template-columns: repeat(12, 1fr)
+      grid-template-rows: 13.02vw auto auto
+      gap: 2.08vw 1.88vw
+      .item
+        gap: 16px
+        grid-column: span 4
+        flex-direction: column
+        display: flex
+        align-items: center
+        &--image
+          //display: flex
+          //justify-content: center
+          position: relative
+          img
+            scale: 2
+            position: relative
+            z-index: 1
+            width: 8.44vw
+            max-width: 150px
+            aspect-ratio: 1/1
+          &:after
+            content: ''
+            position: absolute
+            top: 50%
+            translate: -50% -50%
+            aspect-ratio: 650/350
+            width: 33.85vw
+            left: 50%
+            background-image: url("../img/advantages-png/flare.png")
+            background-repeat: no-repeat
+            background-position: center
+            background-size: contain
+            pointer-events: none
+            z-index: 0
+        &--content
+          font-weight: 700
+          line-height: 1.1
+          z-index: 2
+          position: relative
+          font-size: 1.25vw
+          text-align: center
+      .item:nth-child(1)
+        grid-column: span 3
+        grid-row: 2
+        position: relative
+        &:after
+          @media(min-width: 998px)
+            content: ''
+            position: absolute
+            top: 90%
+            translate: -50% -50%
+            aspect-ratio: 1/1
+            width: 160%
+            left: 50%
+            background-image: url("../img/advantages/flare-png.png")
+            background-position: center
+            background-size: contain
+        .item--image
+          img
+            position: relative
+            top: -50%
+          &:after
+            @media(min-width: 998px)
+              top: -10%
+      .item:nth-child(1)
+        order: 1
+      .item:nth-child(2)
+        grid-column: 3/ span 2
+        grid-row: 3
+      .item:nth-child(3)
+        grid-column: 9/ span 2
+        grid-row: 3
+
+      .item:nth-child(4)
+        grid-column: 10/ span 2
+        grid-row: 2
+        position: relative
+        &:after
+          @media(min-width: 998px)
+            content: ''
+            position: absolute
+            top: 50%
+            translate: -50% -50%
+            aspect-ratio: 1/1
+            width: 200%
+            left: 50%
+            background-image: url("../img/advantages/flare-png.png")
+            background-position: center
+            background-size: contain
+
+
+.content_advantages-1,
+.content_advantages
+  .image--flash
+    display: none
+    @media(min-width: 998px)
+      display: block
+      position: absolute
+      translate: -50% -50%
+      top: 50%
+      left: 50%
+      width: 100vw
+      height: auto
+      aspect-ratio: 1/1
+      z-index: 10
+      opacity: 0
+      pointer-events: none
+      img
+        object-fit: contain
+
+
+.content_advantages
+  @media(min-width: 998px)
+    height: 100vh

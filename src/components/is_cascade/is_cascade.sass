@@ -1,0 +1,175 @@
+.is_cascade
+  overflow: hidden
+  line-height: 1.5
+  font-size: var(--fs-24)
+  h1
+    line-height: 1
+    text-transform: uppercase
+    font-weight: 300
+    letter-spacing: -0.02em
+    font-size: clamp(40px, calc(40px + (148 - 40) * ((100vw - 1024px) / (1920 - 1024))), 148px)
+    margin: var(--g-section-inner) 0 0
+  h2
+    font-size: var(--fs-96)
+    margin: var(--g-section-inner) 0 0
+  h3
+    font-size: var(--fs-72)
+    margin: var(--g-section-inner) 0 0
+  h4
+    font-size: var(--fs-52)
+    margin: var(--g-section-inner) 0 0
+  h5, h6
+    font-size: var(--fs-40)
+    margin: var(--g-section-inner) 0 0
+  & > p
+    margin-top: var(--g-24)
+  & p > a:not(.button)
+    color: #144FC3
+    text-decoration: underline
+    margin: 0 0.5em
+    &:hover,
+    &:active
+      color: var(--accent)
+    &:visited
+      opacity: 0.8
+  strong, b
+    font-weight: 700
+  & ul, ol
+    margin: var(--g-24) 0
+    padding-left: 26px
+    li
+      &:not(:last-of-type)
+        margin-bottom: 8px
+
+
+  figure
+    margin: var(--g-content) 0
+    border-radius: var(--border-corner)
+    overflow: hidden
+    img, iframe, video
+      margin-top: 0
+      margin-bottom: 0
+      border-radius: var(--border-corner)
+      overflow: hidden
+    img
+      aspect-ratio: initial
+      object-fit: contain
+      max-height: 720px
+      height: auto
+      width: 100%
+      margin-top: 0
+      margin-bottom: 0
+    figcaption
+      color: var(--c-text-disabled)
+      font-size: 16px
+      margin-top: 16px
+      @media(max-width: 768px)
+        padding: 0 var(--g-container)
+      &:empty
+        margin: 0
+  & > img,
+  & > video,
+  & > iframe,
+  & > object
+    margin: var(--g-32) 0
+  video, img, iframe, object
+    aspect-ratio: 870 / 472
+    width: 100%
+    height: auto
+    object-fit: cover
+    object-position: center
+    border-radius: 0
+    overflow: hidden
+    margin: var(--g-content) 0
+    figure
+      margin: 0
+  blockquote
+    padding: var(--g-32)
+    background-color: var(--c-surface-subdued)
+    border-radius: var(--border-corner)
+    position: relative
+    margin: var(--g-content) 0
+    .blockquote--text
+      position: relative
+      padding-left: var(--g-32)
+      font-size: var(--fs-36)
+      line-height: 1.5
+      font-weight: 500
+      &:before
+        content: "“"
+        position: absolute
+        left: -6px
+        top: 0
+    .blockquote--author
+      display: flex
+      gap: 16px
+      align-items: center
+      padding-left: var(--g-32)
+      &--image
+        border-radius: var(--border-corner-button)
+        overflow: hidden
+        img
+          border-radius: var(--border-corner-button)
+          max-width: 56px
+          aspect-ratio: 1/1
+      &--text
+        p
+          font-size: var(--fs-24)
+        span
+          font-size: 16px
+          color: var(--c-text-subdued)
+          margin-top: 8px
+  .button_wrapper, .block--actions
+    display: flex
+    gap: 8px
+    margin: var(--g-32) 0
+  .is_cascade--accordion
+    margin: var(--g-content) 0
+    .accordion
+      max-width: 100%
+  & p + .button,
+  & ul + .button
+    margin-top: var(--g-32)
+  .is_cascade--table
+    margin: var(--g-content) 0
+    @media(max-width: 768px)
+      max-width: 100vw
+      overflow-x: auto
+      margin: var(--g-content) calc(var(--g-container) * -1)
+      padding: 0 var(--g-container)
+      scroll-margin-block-end: var(--g-container)
+  table
+    border-collapse: collapse
+    width: 100%
+    border-radius: var(--border-corner)
+    border-collapse: separate
+    border-spacing: 0
+    thead, th
+      color: #404B57
+      font-weight: 600
+      background-color: #E0E7F3
+      text-align: left
+    td, th
+      border: 1px solid #11182029
+      padding: 8px 16px
+      min-width: 100px
+      &> a:not(.button)
+        color: #144FC3
+        &:hover,
+        &:active
+          color: var(--accent)
+        &:visited
+          opacity: 0.8
+    tbody td:first-of-type
+      background-color: #F2F5FA
+  thead
+    tr:first-of-type td:first-of-type
+      border-top-left-radius: var(--border-corner)
+    tr:first-of-type td:last-of-type
+      border-top-right-radius: var(--border-corner)
+
+  tbody
+    tr:last-of-type td:first-of-type
+      border-bottom-left-radius: var(--border-corner)
+    tr:last-of-type td:last-of-type
+      border-bottom-right-radius: var(--border-corner)

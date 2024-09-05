@@ -1,0 +1,93 @@
+.swiper-slide,
+.card
+  -webkit-transform: translate3d(0, 0, 0)
+  -webkit-backface-visibility: hidden
+
+.swiper-wrapper
+  -webkit-transform-style: preserve-3d
+
+.swiper-button-next,
+.swiper-button-prev
+  position: relative
+  cursor:  pointer
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 8px
+  background: #fff
+  border-radius: 16px
+  height: auto
+  width: auto
+  right: 0
+  left: 0
+  margin-top: 0
+  top: 0
+  pointer-events: all
+  transition: var(--transition)
+  width: auto
+  aspect-ratio: 1/1
+  &:after
+    content: none
+  &:before
+    content: ''
+    display: block
+    inset: 0
+    background-repeat: no-repeat
+    background-position: center
+    background-size: contain
+    aspect-ratio: 1/1
+    width: 26px
+    height: auto
+  &.swiper-button-disabled
+    opacity: 0.4
+    cursor: auto
+
+.swiper-button-disabled
+  pointer-events: none
+
+.swiper-pagination
+  width: fit-content
+
+.swiper-pagination-bullets
+  --swiper-pagination-bottom: 12px
+
+.slider_controls
+  display: none
+  justify-content: space-between
+  pointer-events: none
+  gap: 10px
+  @media(min-width: 768px)
+    display: flex
+
+.swiper-pagination
+  display: flex
+  gap: 8px
+
+.swiper-button-prev,
+.swiper-button-next
+  &:hover,
+  &:focus
+    border-color: rgba(20, 26, 37, 1)
+  &.swiper-button-disabled
+    opacity: 0.5
+.swiper-button-prev:before
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M16.4671 2.11109C16.636 2.28508 16.77 2.49175 16.8615 2.71927C16.9529 2.94679 17 3.19069 17 3.43701C17 3.68333 16.9529 3.92723 16.8615 4.15475C16.77 4.38227 16.636 4.58894 16.4671 4.76294L9.39633 12.0602L16.4671 19.3575C16.6358 19.5317 16.7696 19.7384 16.8609 19.9659C16.9522 20.1934 16.9992 20.4372 16.9992 20.6835C16.9992 20.9297 16.9522 21.1735 16.8609 21.401C16.7696 21.6285 16.6358 21.8353 16.4671 22.0094C16.2983 22.1835 16.098 22.3216 15.8776 22.4159C15.6572 22.5101 15.4209 22.5586 15.1823 22.5586C14.9437 22.5586 14.7074 22.5101 14.487 22.4159C14.2666 22.3216 14.0663 22.1835 13.8975 22.0094L5.53294 13.3768C5.364 13.2028 5.22997 12.9961 5.13852 12.7686C5.04707 12.541 5 12.2971 5 12.0508C5 11.8045 5.04707 11.5606 5.13852 11.3331C5.22997 11.1056 5.364 10.8989 5.53294 10.7249L13.8975 2.09228C14.59 1.37759 15.7563 1.3776 16.4671 2.11109Z' fill='%230124A3'/%3E%3C/svg%3E")
+.swiper-button-next:before
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M7.53294 2.11109C7.364 2.28508 7.22997 2.49175 7.13852 2.71927C7.04707 2.94679 7 3.19069 7 3.43701C7 3.68333 7.04707 3.92723 7.13852 4.15475C7.22997 4.38227 7.364 4.58894 7.53294 4.76294L14.6037 12.0602L7.53294 19.3575C7.36422 19.5317 7.23039 19.7384 7.13908 19.9659C7.04777 20.1934 7.00077 20.4372 7.00077 20.6835C7.00077 20.9297 7.04777 21.1735 7.13908 21.401C7.23039 21.6285 7.36422 21.8353 7.53294 22.0094C7.70165 22.1835 7.90195 22.3216 8.12239 22.4159C8.34283 22.5101 8.57909 22.5586 8.8177 22.5586C9.0563 22.5586 9.29256 22.5101 9.513 22.4159C9.73344 22.3216 9.93374 22.1835 10.1025 22.0094L18.4671 13.3768C18.636 13.2028 18.77 12.9961 18.8615 12.7686C18.9529 12.541 19 12.2971 19 12.0508C19 11.8045 18.9529 11.5606 18.8615 11.3331C18.77 11.1056 18.636 10.8989 18.4671 10.7249L10.1025 2.09228C9.40996 1.37759 8.24366 1.3776 7.53294 2.11109Z' fill='%230124A3'/%3E%3C/svg%3E")
+.swiper-button-lock,
+.swiper-pagination-lock
+  display: none
+
+.swiper-pagination-bullet
+  display: inline-block
+  width: 8px
+  height: 8px
+  border-radius: 50px
+  @media(min-width: 768px)
+    width: 16px
+    height: 16px
+
+.swiper-notification
+  display: none
+
+

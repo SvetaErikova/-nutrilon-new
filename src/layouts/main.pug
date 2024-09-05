@@ -1,0 +1,53 @@
+include ../components/index
+block variables
+
+- var activePage = activePage
+
+doctype html
+html(lang="ru-RU")
+  head
+    meta(charset="utf-8")
+    title #{title}
+    <!--[if IE]>
+    meta(http-equiv='X-UA-Compatible' content="IE = edge")
+    <![endif]-->
+    meta(name="viewport" content="width=device-width,initial-scale=1")
+
+    <!-- Meta tags -->
+    meta( name="description" content="")
+    meta( name="keywords" content="")
+    meta( property="og:type" content="")
+    meta( property="og:site_name" content="")
+    meta( property="og:url" content="")
+    meta( property="og:title" content="")
+    meta( property="og:description" content="")
+    meta( property="og:image" content="")
+    meta( property="twitter:card" content="")
+    meta( property="twitter:url" content="")
+    meta( property="twitter:title" content="")
+    meta( property="twitter:description" content="")
+    meta( property="twitter:image" content="")
+    <!-- Meta End -->
+
+    <!--favicon-->
+    <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="/assets/img/favicon.png" type="image/x-icon">
+    <!--favicon end-->
+
+    link(rel="stylesheet" type='text/css' href="/assets/css/libs.min.css")
+    link(rel="stylesheet" type='text/css' href="/assets/css/main.css")
+
+    <!--[if lt IE 9]>
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js")
+    <![endif]-->
+  body(class=pageClass)
+    .page
+      include ../components/note/note
+      include ../components/header/header
+      main
+        block content
+      include ../components/popup/popup
+      include ../components/footer/footer
+    script(src="/assets/js/libs.min.js")
+    script(src="/assets/js/main.js")
+    block script

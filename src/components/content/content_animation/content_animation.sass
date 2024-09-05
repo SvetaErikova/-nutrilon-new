@@ -1,0 +1,58 @@
+.content_animation
+  position: relative
+  overflow-x: clip
+
+  & > .block
+    padding: 0
+  .image--circle-lens,
+  .image--blick
+    position: absolute
+    z-index: 0
+
+  .image--blick
+    translate: -50% 0
+    aspect-ratio: 1920/1156
+    top: 15vh
+    left: 50%
+    width: 100vw
+    height: auto
+    opacity: 0.7
+    @media(min-width: 998px)
+      top: -20vw
+
+  .image--circle-lens
+    display: none
+    @media(min-width: 998px)
+      display: block
+      top: 12.50vw
+  .image--big-flare
+    display: none
+    @media(min-width: 998px)
+      position: absolute
+      aspect-ratio: 1920/815
+      width: 100vw
+      top: 20%
+      z-index: 4
+      display: block
+      opacity: 0
+
+
+  .block_animation-title
+    max-width: 1528px
+    margin: 0 auto 5%
+    position: relative
+    z-index: 1
+    @media(min-width: 768px)
+      margin: 5% auto 4%
+    h2
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      background:  radial-gradient(41.74% 107.87% at 10.11% 0%, #6A9BD6 0%, #1961C7 54.86%, rgba(106, 155, 214, 0) 100%) ,radial-gradient(14.81% 163.2% at 73.9% 100%, rgba(106, 155, 214, 0.83) 0%, rgba(25, 97, 199, 0.83) 54.86%, rgba(106, 155, 214, 0) 100%) ,linear-gradient(0deg, #0124A3, #0124A3)
+      text-align: center
+      font-size: clamp(22px, calc(22px + (64 - 22) * ((100vw - 798px) / (1440 - 798))), 64px)
+      padding: 0 8px
+      @media(min-width: 768px)
+        padding: 0
+        font-size: 3.33vw
+      @media(min-width: 1920px)
+        font-size: 65px

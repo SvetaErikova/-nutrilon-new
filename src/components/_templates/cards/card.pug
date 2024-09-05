@@ -1,0 +1,144 @@
+mixin card--offer(title, text, image_src)
+  .card
+    .card--content
+      .card--title
+        h3= title
+      .card--label До завершения
+        span.js-timer(data-to="1701348720000")
+      .card--text
+        p=text
+      .card--actions
+        a.card--action(href="")
+          span.icon-ic-lg-link
+        a.card--action.card--action-calendar(href="/")
+          span.icon-HeaderCalendar
+    .card--image
+      img(src=image_src alt="")
+
+mixin card--events
+  a.card(href="")
+    .card--date
+      strong 21
+      span июн
+    .card--image.swiper-no-swiping-block
+      <!-- Класс проставляется автоматически -->
+      img(src="/assets/img/offer.jpg" alt="")
+    .card--content
+      .card--title
+        h3 День рождения парка “Дримвуд” - сказочные 5 лет!
+        .card--action
+          span.icon
+      .card--text
+        .card--text_item
+          span Время
+          span 11 июня 18:00
+        .card--text_item
+          span Место
+          span Винный парк
+
+mixin card--link
+  a.card(href="/")
+    .card--image
+      img(src="/assets/img/offer.jpg" alt="")
+      .card--action
+        span.icon
+    .card--content
+      .card--title Индивидуальная экскурсия с чайной церемонией
+      .card--text Чайный мастер
+      .card--label
+        span от 5 000 р
+
+mixin card--link-sections
+  a.card(href="/")
+    .card--image
+      img(src="/assets/img/offer.jpg" alt="")
+      .card--action
+        span.icon
+    .card--content
+      .card--title Индивидуальная экскурсия с чайной церемонией
+      .card--label
+        span от 5 000 р
+
+mixin card--popup
+  .card(data-openpopup="popup_cascade")
+    .card--image
+      img(src="/assets/img/offer.jpg" alt="")
+      .card--action
+        span.icon
+    .card--content
+      .card--label
+        span от 5 000 р
+        span Услуга
+      .card--title Бабанова Елена Павловна
+      .card--text Чайный мастер
+
+mixin card--simple
+  .card
+    .card--image
+      img(src="/assets/img/offer.jpg" alt="")
+      .card--action
+        span.icon
+    .card--content
+      .card--label
+        span от 5 000 р
+      .card--title Индивидуальная экскурсия с чайной церемонией
+      .card--text Чайный мастер
+
+
+mixin card--accomodation(title)
+  a.card-detail(title=title href="")
+    .card--image.swiper-no-swiping-block
+      img(src="/assets/img/room_1.jpg" alt="")
+      img(src="/assets/img/room_2.jpg" alt="")
+      img(src="/assets/img/room_1.jpg" alt="")
+      img(src="/assets/img/room_2.jpg" alt="")
+    .card--content
+      .card--title
+        h3=title
+        .card--action
+          span.icon-ic-lg-link
+      .card--advantages
+        ul
+          li
+            span.icon
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <circle cx="14" cy="11" r="6.2" stroke="#2E333D" stroke-width="1.6"/>
+              <path d="M22 28V21H6V28" stroke="#2E333D" stroke-width="1.6"/>
+              </svg>
+            span до 3 гостей
+          li
+            span.icon-ic-map-beach
+            span Вид на море/горы
+          li
+            span.icon
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+              <path d="M22 17.7657C22 22.3134 18.4183 26 14 26C9.58172 26 6 22.3134 6 17.7657C6 14.1805 8.22615 11.1304 11.3333 10" stroke="#2E333D" stroke-width="1.6"/>
+              <path d="M26 25L22 17H13L11 7.5" stroke="#2E333D" stroke-width="1.6"/>
+              <circle cx="11" cy="4" r="3.2" stroke="#2E333D" stroke-width="1.6"/>
+              </svg>
+            span Для людей с ограниченными возможностями
+      .card--text В красивом и просторном номере есть все необходимое для комфортного отдыха. Много света, сказочный вид из панорамного окна и располагающий к отдыху интерьер — сюда так приятно возвращаться после прогулок. Прекрасно подходит для семейной пары с ребенком
+
+
+mixin card--vacancy(image_src, title, salary, text)
+  a.card(href="")
+    .card--image
+      img(src=image_src alt="")
+    .card--content
+      .card--title=title
+      .card--subtitle= salary
+      .card--text= text
+
+mixin card--review
+  .card(data-openpopup="popup_cascade")
+    .review_author
+      .review_author--image
+        img(src="/assets/img/review.png")
+      .review_author--name efra_morrison
+    .card--image
+      img(src="/assets/img/review_1.png")
+      .card--action
+        span.icon
+    .card--content
+      .card--text Как можно понять по нашим лицам на этих фото-Мы в полном восторге от пребывания в @mriya_resort @mriya.winepark
+

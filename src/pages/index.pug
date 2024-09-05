@@ -1,0 +1,1076 @@
+extends ../layouts/hero
+
+block variables
+  - var title = "Главная"
+  - var pageClass = ''
+  - var activePage = 'index'
+
+block content
+  section.section-one
+    // hero
+    .block.content_hero
+      <svg class="svg">
+      <clipPath id="mask-hero" clipPathUnits="objectBoundingBox"><path d="M0.535,1 C0.258,0.946,0.035,0.769,0.035,0.631 V0.231 C0.035,0.097,0.111,0.009,0.535,0.009 C0.96,0.009,1,0.097,1,0.231 V0.631 C1,0.769,0.813,0.946,0.535,1"></path></clipPath>
+      </svg>
+      .block--wrapper
+        .block--image
+          .block--image-container
+            video(src='./assets/video/1.mp4' playsinline muted loop autoplay poster='./assets/img/hero/hero-preview.jpg')
+        .block--content
+          .hero--title
+            h1 Nutrilon -<br>сила научной экспертизы
+          .hero--actions
+            a(href='#products').button.button-filled.button-accent
+              span Смотреть все продукты
+          .hero--image
+            picture
+              source(media="(min-width: 768px)" srcset='./assets/img/hero/hero.png')
+              img(src='./assets/img/hero/hero-mob.png' alt='')
+
+
+    // about
+    .block.content_about
+      .block--wrapper
+        .block--image
+          picture
+            source(media="(min-width: 998px)" srcset='./assets/img/about.png')
+            img(src='./assets/img/about-mob.png' alt='')
+
+        .block--content
+          div.desk
+            p Более 50 лет научных исследований позволили Nutricia создать уникальное сочетание BIO-активных компонентов  для поддержки иммунитета и развития интеллекта малыша.
+            b Nutrilon. Ваша Жизнь, Наша Наука.
+          .mob
+            p 50 лет исследований<br>грудного молока
+    .block.content_animation
+      .block_animation-title
+        h2 BIOTIK – инновационное сочетание &nbsp;
+          span(style='white-space:nowrap') BIO-активных&nbsp;
+          | компонентов, приближенных по свойствам к грудному молоку
+      .image--circle-lens
+        picture
+          source(media="(min-width: 768px)" srcset='./assets/img/advantages/circular-lens.png')
+          img(src='./assets/img/advantages/circular-lens-mob.png' )
+      .image--big-flare
+        picture
+          source(media="(min-width: 998px)" srcset='./assets/img/advantages/big-flare.png')
+          img(src='/' )
+      .image--blick
+        img(src='./assets/img/advantages/halo.png' )
+      .block.content_advantages
+        .image--lens
+          picture
+            source(media="(min-width: 768px)" srcset='./assets/img/advantages/lens.png')
+            img(src='/' )
+        .image--flash
+          picture
+            source(media="(min-width: 998px)" srcset='./assets/img/advantages/flash.png')
+            img(src='/' )
+
+
+        .block--content
+          .image--helix
+            picture
+              source(media="(min-width: 768px)" srcset='./assets/img/advantages/helix.png')
+              img(src='./assets/img/advantages/helix-mob.png' )
+          .block--image
+            img(src='./assets/img/advantages/shield-png.png' )
+          .advantages
+            .item
+              .item--image
+                img(src='./assets/img/advantages-png/milk-drop.png' )
+              .item--content
+                .item--title Высокий&nbsp;уровень<br>молочного жира
+            .item
+              .item--image
+                img(src='./assets/img/advantages-png/yellow.png' )
+              .item--content
+                .item--title Олигосахарид&nbsp;грудного<br>молока 3'-GL
+            .item
+              .item--image
+                img(src='./assets/img/advantages-png/red.png' )
+              .item--content
+                .item--title Уникальные&nbsp;пребиотики<br>GOS/FOS (9:1)
+            .item
+              .item--image
+                img(src='./assets/img/advantages-png/red-pearl.png' )
+              .item--content
+                .item--title Жирные&nbsp;кислоты<br>DHA/ARA
+
+
+      .block.content_advantages-1
+        .block--wrapper
+          .advantages
+            .advantages--image
+              img(src='./assets/img/advantages-1/duo.png' alt='')
+            .advantages--content
+              .item
+                .item--image
+                  img(src='./assets/img/advantages-png/yellow.png' )
+                .item--content
+                  .item--title Двойная поддержка иммунитета<br>и микробиоты кишечника
+                  .item--subtitle Уникальный микс пребиотических олигосахаридов с 3’-GL, идентичным грудному  молоку
+              .item
+                .item--image
+                  img(src='./assets/img/advantages-png/red.png' )
+                .item--content
+                  .item--title Легкое переваривание <br>и до 8 раз снижение колик
+                  .item--subtitle Запатентованная технология ферментации Lactofidus®<br>Уникальные пребиотики GOS/FOS (9:1).
+              .item
+                .item--image
+                  img(src='./assets/img/advantages-png/red-pearl.png' )
+                .item--content
+                  .item--title Развитие интеллекта
+                  .item--subtitle Высокий уровень жирных кислот DHA/ARA
+              .item
+                .item--image
+                  img(src='./assets/img/advantages-png/milk-drop.png' )
+                .item--content
+                  .item--title Улучшенная переносимость<br>и сливочный вкус
+                  .item--subtitle Высокий уровень молочного жира
+              .advantages--note.advantages--note-mob
+                .advantages--note_item
+                  .advantages--note-icon.advantages--note-icon-1
+                  span Без пальмового масла
+                .advantages--note_item
+                  .advantages--note-icon.advantages--note-icon-2
+                  span Витамины
+                .advantages--note_item
+                  .advantages--note-icon.advantages--note-icon-3
+                  span Микроэлементы
+
+            .advantages--note
+              .advantages--note_item
+                span Без пальмового масла
+                .advantages--note-icon.advantages--note-icon-1
+              .advantages--note_item
+                span Витамины
+                .advantages--note-icon.advantages--note-icon-2
+              .advantages--note_item
+                span Микроэлементы
+                .advantages--note-icon.advantages--note-icon-3
+
+          //.button.button-filled.button-secondary(data-openpopup='popup_advantages')
+          //  span Больше о составе
+    .block.content_advantages-2
+      .block--wrapper
+        .advantages
+          .advantages--content
+            .item
+              .item--content
+                .item--title Подтвержденный эффект<br> на иммунитет и борьба<br>с инфекциями
+                .item--subtitle Олигосахариды GOS/FOS,<br> действующие подобно<br>пребиотикам грудного молока
+              .item--image
+                img(src='./assets/img/advantages-png/blue-pearl.png' )
+            .item
+              .item--content
+                .item--title Развитие интеллекта
+                .item--subtitle Высокий уровень жирных <br>кислот DHA
+              .item--image
+                img(src='./assets/img/advantages-png/orange-pearl.png' )
+            .item
+              .item--content
+                .item--title Легкое усвоение и<br>хорошее пищеварение
+              .item--image
+                img(src='./assets/img/advantages-png/beige-pearl.png' )
+            .advantages--note.advantages--note-mob
+              .advantages--note_item
+                .advantages--note-icon.advantages--note-icon-1
+                span Без пальмового масла
+              .advantages--note_item
+                .advantages--note-icon.advantages--note-icon-2
+                span Витамины
+              .advantages--note_item
+                .advantages--note-icon.advantages--note-icon-3
+                span Микроэлементы
+          .advantages--image
+            img(src='./assets/img/advantages-2/product.png' alt='')
+          .advantages--note
+            .advantages--note_item
+              span Без пальмового масла
+              .advantages--note-icon.advantages--note-icon-1
+            .advantages--note_item
+              span Витамины
+              .advantages--note-icon.advantages--note-icon-2
+            .advantages--note_item
+              span Микроэлементы
+              .advantages--note-icon.advantages--note-icon-3
+
+        //.button.button-filled.button-secondary(data-openpopup='popup_advantages')
+        //  span Больше о составе
+    .block.content_why
+      .block--wrapper
+        .block--head.-center
+          .block--head_title
+            h3 Почему Nutrilon
+        .block--elements
+          .card
+            .card--title 50 лет<br>исследований<br>грудного<br>молока
+            .card--image
+              picture
+                source(media="(min-width: 768px)" srcset='./assets/img/why/1.png')
+                img(src='./assets/img/why/1-mob.png' alt='')
+          .card
+            .card--title Рекомендован<br> педиатрами*
+            .card--image
+              picture
+                source(media="(min-width: 768px)" srcset='./assets/img/why/2.png')
+                img(src='./assets/img/why/2-mob.png' alt='')
+          .card
+            .card--title BIO-активные <br>компоненты
+            .card--image
+              picture
+                source(media="(min-width: 768px)" srcset='./assets/img/why/3.png')
+                img(src='./assets/img/why/3-mob.png' alt='')
+          .card
+            .card--title Без <br> пальмового<br> масла
+            .card--image
+              picture
+                source(media="(min-width: 768px)" srcset='./assets/img/why/4.png')
+                img(src='./assets/img/why/4-mob.png' alt='')
+          .card
+            .card--title Бесплатная<br> экспертная<br> линия для<br> родителей
+            .card--action
+              .button.button-filled.button-secondary
+                span Наши эксперты
+            .card--image
+              picture
+                source(media="(min-width: 768px)" srcset='./assets/img/why/5.png')
+                img(src='./assets/img/why/5-mob.png' alt='')
+
+          .block--pagination
+            span * IQVIA, Potential evaluation report across pediatricians, April’24
+  section.section-two
+    .block.content_products-line
+      <svg class="svg">
+      <clipPath id="product-mask" clipPathUnits="objectBoundingBox"><path d="M0,0.53 C0,0.702,0.279,0.922,0.628,1 C0.768,0.969,0.896,0.915,1,0.85 V0 L0.051,0 C0.012,0.042,-0.004 e-05,31.315,0,50.9445, V0.53"></path></clipPath>
+      </svg>
+      <svg class="svg">
+      <clipPath id="product-mask-mob" clipPathUnits="objectBoundingBox"><path d="M0.003,0.528 C0.003,0.703,0.239,0.926,0.533,1 C0.739,0.95,0.916,0.823,1,0.693 V0.005 H0.042 C0.012,0.047,0.003,0.097,0.003,0.154 V0.528"></path></clipPath>
+      </svg>
+      .block--wrapper
+        .block--head.-center
+          .block--head_title
+            h3 У Nutrilon есть экспертное&nbsp;решение для каждой истории кормления
+        .block--elements
+          .card.-c-blue
+            .card--content
+              .card--title
+                p Устранение<br>колик, запоров<br>и срыгиваний
+            .card--image
+              .card--image-mask
+                img(src='./assets/img/product-line/blue.png' alt='')
+          .card.-c-purple
+            .card--content
+              .card--title
+                p Облегчение <br>симптомов <br>аллергии
+            .card--image
+              .card--image-mask
+                img(src='./assets/img/product-line/purple.png' alt='')
+          .card.-c-green
+            .card--content
+              .card--title
+                p Питание для<br>недоношенных<br>малышей
+            .card--image
+              .card--image-mask
+                img(src='./assets/img/product-line/green.png' alt='')
+          .card.-c-yellow
+            .card--content
+              .card--title
+                p Натуральные<br>детские каши
+            .card--image
+              .card--image-mask
+                img(src='./assets/img/product-line/yellow.png' alt='')
+
+
+    // products
+    #products.block.content_products
+      .block--wrapper
+        .block--head
+          .block--head_title
+            h3 Наши продукты
+        .block--filter
+          .button.button-filled.button-secondary(data-openpopup="popup_for_filters")
+            span.icon-filter
+            span Фильтр
+          .item.js-tabs
+            .item--title
+              p Тип
+            .item--list
+              button.button(data-type='')
+                span Все
+              button.button(data-type="mix")
+                span Смесь
+              button.button(data-type="porridge")
+                span Каша
+          .item.js-tabs
+            .item--title
+              p Возраст
+            .item--list
+              button.button(data-age='')
+                span Все
+              button.button(data-age="0")
+                span 0+
+              button.button(data-age="6")
+                span 6+
+              button.button(data-age="12")
+                span 12+
+              button.button(data-age="18")
+                span 18+
+              button.button(data-age="first")
+                span Первая ложка
+        .block--elements
+          a.card(href="/nutrilon-milk-rice-porridge-200/", data-type="porridge", data-age="6")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/nutri_porr_ris.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/nutri_porr_ris3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/nutri_porr_ris8.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/nutri_porr_ris9.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/nutri_porr_ris5.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/nutri_porr_ris6.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Nutrilon каша молочная рисовая (200 гр)
+              .card--subtitle
+                span 200 г,
+                span с 6 мес
+          a.card(href="/nutrilon-buckwheat-milk-porridge-200/", data-type="porridge", data-age="6")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/por_grech.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/por_grech1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/por_grech2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/por_grech3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/por_grech4.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/nutri_porr_ris6.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Nutrilon каша молочная гречневая (200 гр)
+              .card--subtitle
+                span 200 г,
+                span с 6 мес
+          a.card(href="/nutrilon-corn-milk-porridge-200/", data-type="porridge", data-age="6")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/kasha_kuk.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/kasha_kuk1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/kasha_kuk2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/kasha_kuk3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/nutri_porr_ris5.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/nutri_porr_ris6.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Nutrilon каша молочная кукурузная (200 гр)
+              .card--subtitle
+                span 200 г,
+                span с 6 мес
+          a.card(href="/nutrilon-multigrain-milk-porridge-apple-banana-200/", data-type="porridge", data-age="6")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/kasha_mult.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/kasha_mult1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/kasha_mult2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/kasha_mult3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/nutri_porr_ris5.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/nutri_porr_ris6.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Nutrilon каша молочная мультизлаковая яблоко-банан (200 гр)
+              .card--subtitle
+                span 200 г,
+                span с 6 мес
+          a.card(href="/nutrilon-rice-apple-banana-200-2/", data-type="porridge", data-age="6")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/kasha_ris_banan.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/kasha_ris_banan1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/kasha_ris_banan2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/kasha_ris_banan3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/nutri_porr_ris5.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/nutri_porr_ris6.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Nutrilon каша молочная рисовая Банан-Яблоко (200 гр)
+              .card--subtitle
+                span 200 г,
+                span с 6 мес
+          a.card(href="/multigrain/", data-type="porridge", data-age="6")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/kasha_bezmol_mult.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/kasha_bezmol_mult1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/kasha_bezmol_mult2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/kasha_bezmol_mult3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/nutri_porr_ris5.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/nutri_porr_ris6.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Безмолочная мультизлаковая каша Nutrilon®
+              .card--subtitle
+                span 180 г,
+                span с 6 мес
+          a.card(href="/oatmeal/", data-type="porridge", data-age="first")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/kasha_ovs_bezmol.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/kasha_ovs_bezmol1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/kasha_ovs_bezmol2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/kasha_ovs_bezmol3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/nutri_porr_ris5.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/nutri_porr_ris6.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Безмолочная овсяная каша Nutrilon®
+              .card--subtitle
+                span 180 г,
+                span Первая ложка
+          a.card(href="/rice/", data-type="porridge", data-age="first")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/kasha_ris_bezmol.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/kasha_ris_bezmol1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/kasha_ris_bezmol2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/kasha_ris_bezmol3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/nutri_porr_ris5.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/nutri_porr_ris6.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Каша рисовая безмолочная Нутрилон
+              .card--subtitle
+                span 180 г,
+                span Первая ложка
+          a.card(href="/corn/", data-type="porridge", data-age="first")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/kasha_kuk_bezmol.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/kasha_kuk_bezmol1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/kasha_kuk_bezmol2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/kasha_kuk_bezmol3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/nutri_porr_ris5.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/nutri_porr_ris6.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Безмолочная кукурузная каша Nutrilon®
+              .card--subtitle
+                span 180 г,
+                span Первая ложка
+          a.card(href="/buckwheat/", data-type="porridge", data-age="first")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/kasha_grech_bezmol.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/kasha_grech_bezmol1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/kasha_grech_bezmol2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/kasha_grech_bezmol3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/nutri_porr_ris5.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/nutri_porr_ris6.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Безмолочная гречневая каша Nutrilon®
+              .card--subtitle
+                span 180 г,
+                span Первая ложка
+          a.card(href="/nutrilon-pepti-gastro-800/", data-type="mix", data-age="first")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/smes.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes4.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes5.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes6.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes7.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes8.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Нутрилон Пепти Гастро 800 г
+              .card--subtitle
+                span 800 г,
+                span Первая ложка
+          a.card(href="/nutrilon-pepti-allergy-800/", data-type="mix", data-age="first")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/smes_pepti_al.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pepti_al1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pepti_al2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pepti_al3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pepti_al4.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pepti_al5.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes7.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes8.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Nutrilon® Пепти Аллергия 800г
+              .card--subtitle
+                span 800 г,
+                span Первая ложка
+          a.card(href="/nutrilon-comfort-1-900/", data-type="mix", data-age="first")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/smes_komf.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_komf1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_komf2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_komf3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_komf4.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_komf5.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_komf6.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_komf7.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_komf8.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_komf9.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Nutrilon® Комфорт 1 900г
+              .card--subtitle
+                span 900 г,
+                span Первая ложка
+          a.card(href="/nutrilon-ga-2-800/", data-type="mix", data-age="6")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/smes_ga1.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Nutrilon® ГА 2 800г
+              .card--subtitle
+                span 800 г,
+                span с 6 мес
+          a.card(href="/nutrilon-ga-1-800/", data-type="mix", data-age="0")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/smes_ga2.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Nutrilon® ГA* 1 800г
+              .card--subtitle
+                span 800 г,
+                span с 0 мес
+          a.card(href="/nutrilon-syneo-400/", data-type="mix", data-age="0")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/smes_amin.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_amin1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_amin2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_amin3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_amin4.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_amin5.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_amin6.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_amin7.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Nutrilon® Аминокислоты’ Syneo 400г
+              .card--subtitle
+                span 400 г,
+                span с 0 мес
+          a.card(href="/duobiotik-3-800/", data-type="mix", data-age="12")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/smes_fut.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_fut1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_fut2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_fut3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_fut4.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_fut5.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_fut6.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_fut7.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_fut8.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Nutrilon® Profutura® DUOBIOTIK 3 800 г
+              .card--subtitle
+                span 800 г,
+                span с 12 мес
+          a.card(href="/duobiotik-2-800/", data-type="mix", data-age="6")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/smes_pro.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pro1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pro2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pro3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pro4.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Nutrilon Profutura 2 800г
+              .card--subtitle
+                span 800 г,
+                span с 6 мес
+          a.card(href="/duobiotik-1-800/", data-type="mix", data-age="0")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/smes_prof.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_prof1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_prof2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_prof3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_prof4.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_prof5.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Nutrilon® Profutura® DUOBIOTIK 1 800г
+              .card--subtitle
+                span 800 г,
+                span с 0 мес
+          a.card(href="/nutribiotik_4-600/", data-type="mix", data-age="18")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/smes_prem.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_prem1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_prem2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_prem3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_prem4.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_prem5.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_prem6.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_prem7.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Nutrilon® Premium Nutribiotik 4 600 г
+              .card--subtitle
+                span 600 г,
+                span с 18 мес
+          a.card(href="/nutribiotik_1-350/", data-type="mix", data-age="0")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/smes_pre.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pre1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pre2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pre3.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Nutrilon® 1 Premium 350г
+              .card--subtitle
+                span 350 г,
+                span с 0 мес
+          a.card(href="/nutribiotik_4-1200/", data-type="mix", data-age="18")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/smes_pre_nutri.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pre_nutri1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pre_nutri2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pre_nutri3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pre_nutri4.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pre_nutri5.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pre_nutri6.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pre_nutri7.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pre_nutri8.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Nutrilon® Premium Nutribiotik 4 1200 г
+              .card--subtitle
+                span 1200 г,
+                span с 18 мес
+          a.card(href="/nutribiotik_3-600/", data-type="mix", data-age="12")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/smes_premium.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_premium2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_premium3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_premium4.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_premium5.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_premium6.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_premium7.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_premium8.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Нутрилон Премиум 3 600г
+              .card--subtitle
+                span 600 г,
+                span с 12 мес
+          a.card(href="/nutribiotik_3-1200/", data-type="mix", data-age="12")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/smes_12nutri.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_12nutri2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_12nutri3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_12nutri4.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_12nutri5.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_12nutri6.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_12nutri7.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_12nutri8.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_12nutri9.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Нутрилон Премиум 3 1200г
+              .card--subtitle
+                span 1200 г,
+                span с 12 мес
+          a.card(href="/nutrilon-pre-1-400/", data-type="mix", data-age="0")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/smes_nutrilon_pre.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_nutrilon_pre1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_nutrilon_pre2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_nutrilon_pre3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_nutrilon_pre4.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_nutrilon_pre5.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Nutrilon® Пре 1 400г
+              .card--subtitle
+                span 400 г,
+                span с 0 мес
+          a.card(href="/nutrilon-pre-0-400/", data-type="mix", data-age="0")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/smes_nutrilon0_pre.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_nutrilon0_pre1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_nutrilon0_pre2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_nutrilon0_pre3.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Nutrilon® Пре 0 400г
+              .card--subtitle
+                span 400 г,
+                span с 0 мес
+          a.card(href="/nutrilon-pepti-gastro-450/", data-type="mix", data-age="0")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/smes_pepti_gastro.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pepti_gastro1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pepti_gastro2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pepti_gastro3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pepti_gastro4.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pepti_gastro5.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pepti_gastro6.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pepti_gastro7.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pepti_gastro8.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Нутрилон Пепти Гастро 450 г
+              .card--subtitle
+                span 450 г,
+                span с 0 мес
+          a.card(href="/nutrilon-pepti-allergy-400/", data-type="mix", data-age="0")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/smes_pepti_aler.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pepti_aler1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pepti_aler2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pepti_aler3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pepti_aler4.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pepti_aler5.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pepti_aler6.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pepti_aler7.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Nutrilon® Пепти Аллергия 400г
+              .card--subtitle
+                span 400 г,
+                span с 0 мес
+          a.card(href="/nutrilon-comfort-2-800/", data-type="mix", data-age="6")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/smes_nutri_comfort.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_nutri_comfort1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_nutri_comfort2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_nutri_comfort3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_nutri_comfort4.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_nutri_comfort5.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_nutri_comfort6.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_nutri_comfort7.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_nutri_comfort8.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_nutri_comfort9.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_nutri_comfort10.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Nutrilon Comfort 2 800 г
+              .card--subtitle
+                span 800 г,
+                span с 6 мес
+          a.card(href="/nutrilon-comfort-1-400/", data-type="mix", data-age="0")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/smes_nutri1_comfort.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_nutri1_comfort1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_nutri1_comfort2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_nutri1_comfort3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_nutri1_comfort4.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_nutri1_comfort5.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_nutri1_comfort6.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_nutri1_comfort7.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_nutri1_comfort8.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_nutri1_comfort9.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_nutri1_comfort10.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Nutrilon® Комфорт 1 400г
+              .card--subtitle
+                span 400 г,
+                span с 0 мес
+          a.card(href="/nutrilon-acidified-2-350/", data-type="mix", data-age="6")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/smes_kisl.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_kisl1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_kisl2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_kisl3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_kisl4.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_kisl5.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Nutrilon® Кисломолочный 2 350г
+              .card--subtitle
+                span 350 г,
+                span с 6 мес
+          a.card(href="/nutrilon-acidified-1-350/", data-type="mix", data-age="0")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/smes_1kisl.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_1kisl1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_1kisl2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_1kisl3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_1kisl4.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_1kisl5.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Nutrilon® Кисломолочный 1 350г
+              .card--subtitle
+                span 350 г,
+                span с 0 мес
+          a.card(href="/nutrilon-ga-2-400/", data-type="mix", data-age="6")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/smes_ga2_nutrilon.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Nutrilon® ГА 2 400г
+              .card--subtitle
+                span 400 г,
+                span с 6 мес
+          a.card(href="/nutrilon-ga-1-400/", data-type="mix", data-age="0")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/smes_pronutri.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Nutrilon® ГA* 1 400г
+              .card--subtitle
+                span 400 г,
+                span с 0 мес
+          a.card(href="/nutrilon-lactose-free-400/", data-type="mix", data-age="0")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/smes_bezlak.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_bezlak1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_bezlak2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_bezlak3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_bezlak4.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_bezlak5.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_bezlak6.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_bezlak7.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Nutrilon® Безлактозный 400г
+              .card--subtitle
+                span 400 г,
+                span с 0 мес
+          a.card(href="/nutrilon-anti-reflux-400/", data-type="mix", data-age="0")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/smes_anti.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_anti1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_anti2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_anti3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_anti4.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_anti5.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_anti6.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_anti7.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Nutrilon® Антирефлюкс 400г
+              .card--subtitle
+                span 400 г,
+                span с 0 мес
+          a.card(href="/nutribiotik_2-600/", data-type="mix", data-age="6")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/smes_pre_nutribiotik.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pre_nutribiotik1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pre_nutribiotik2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pre_nutribiotik3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pre_nutribiotik4.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Nutrilon® Premium Nutribiotik 2 600г
+              .card--subtitle
+                span 600 г,
+                span с 6 мес
+          a.card(href="/nutribiotik_2-350/", data-type="mix", data-age="6")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/smes_premium_2nutribiotik.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pre_nutribiotik1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pre_nutribiotik2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pre_nutribiotik3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pre_nutribiotik4.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Nutrilon® Premium Nutribiotik 2 350г
+              .card--subtitle
+                span 350 г,
+                span с 6 мес
+          a.card(href="/nutribiotik_2-1200/", data-type="mix", data-age="6")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/smes_nutribiot_premium.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pre_nutribiotik1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pre_nutribiotik2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pre_nutribiotik3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pre_nutribiotik4.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Nutrilon® Premium Nutribiotik 2 1200г
+              .card--subtitle
+                span 1200 г,
+                span с 6 мес
+          a.card(href="/nutribiotik_1-600/", data-type="mix", data-age="0")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/nutrilon_smes_1premium.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pre_nutribiotik1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pre_nutribiotik2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pre_nutribiotik3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pre_nutribiotik4.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Nutrilon® 1 Premium 600г
+              .card--subtitle
+                span 600 г,
+                span с 0 мес
+          a.card(href="/nutribiotik_1-1200/", data-type="mix", data-age="0")
+            .card--image
+              img(class="card__image_slide", src="./assets/img/products/nutricia_smes_nutrilon_pre.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pre_nutribiotik1.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pre_nutribiotik2.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pre_nutribiotik3.jpg", alt='', loading="lazy")
+              img(class="card__image_slide", src="./assets/img/products/smes_pre_nutribiotik4.jpg", alt='', loading="lazy")
+            .card--content
+              .card--stars
+              .card--title
+                h4 Nutrilon® 1 Premium 1200г
+              .card--subtitle
+                span 1200 г,
+                span с 0 мес
+          .block--pagination
+            a.button.button-filled.button-secondary(href="https://www.nutriclub.ru/category/products/")
+              span Смотреть все продукты
+        .block--not-found
+          p По вашему запросу ничего не найдено Пожалуйста, измените параметры поиска
+          .button.button-outlined.button-accent.js-reset
+            span Сбросить параметры
+
+  section.section-three
+    // reviews
+    .block.block_list-slider.content_rewiews
+      .block--wrapper
+        .block--head
+          .block--head_title
+            h3 Отзывы мам
+        .block--elements
+          .card
+            .review.review-text
+              .review--author
+                .review--author_image
+                  img(src='./assets/img/review.png' alt='')
+                .review--author_name Ольга
+                .review--author_text
+                  .star-rate
+                  span  1 месяц назад
+
+              .review--content
+                .is_cascade
+                  p Старшего ребенка после года перевела на Нутрилон, младшего тоже собиралась, но увидела новинку – Дуобиотик.
+                  p Понравился состав последнего поколения, эта смесь как по мне самая полноценная из всего, что можно найти в продаже. Ну и самое главное, что ребенку она идеально подошла, в туалет ходим как по часам, я очень довольна.
+
+          .card
+            .review.review-text
+              .review--author
+                .review--author_image
+                  img(src='./assets/img/review.png' alt='')
+                .review--author_name Екатерина
+                .review--author_text
+                  .star-rate
+                  span  2 месяц назад
+
+              .review--content
+                .is_cascade
+                  p Смесь легко растворяется в воде и имеет приятный вкус. К томе же, я заметила, в любом магазине на полках всегда есть это питание, причем в ассортименте и исключительно с хорошими сроками годности.
+          .card
+            .review.review-video
+              .review--content
+                video(src='./assets/video/2.mp4' poster='https://www.nutriclub.ru/wp-content/themes/babysites/assets/images/header/nutriclubLogo.png')
+          .card
+            .review.review-video
+              .review--content
+                video(src='./assets/video/2.mp4' poster='https://www.nutriclub.ru/wp-content/themes/babysites/assets/images/header/nutriclubLogo.png')
+    // FAQ
+    .block.block_list.content_faq
+      .block--wrapper
+        .block--head.-center
+          .block--head_title
+            h3 Часто задаваемые вопросы
+          .block--head_subtitle
+            p Узнайте ответы на часто задаваемые вопросы  или задайте свой
+        .block--elements
+          .accordion.is_open
+            .accordion--button
+              p.accordion--button_text Как отличить смесь Нутрилон от подделки?
+                span.icon
+            .accordion--content
+              .is_cascade
+                p В обновленной формуле Nutrilon Premium Nutribiotik (1,2) теперь есть естественные олигосахариды грудного молока, что приближает смесь к идеалу - к грудному молоку. Также теперь отсутствует пальмовое масло.
+                p Новая формула базируется на изучении более 50 лет состава и свойств грудного молока. В составе смеси используется новая молочная основа, изменился жировой компонент (большое количество жирных кислот, отсутствует пальмовое масло).
+          .accordion
+            .accordion--button
+              p.accordion--button_text Чем отличается новый Нутрилон от старого?
+                span.icon
+            .accordion--content
+              .is_cascade
+                p В обновленной формуле Nutrilon Premium Nutribiotik (1,2) теперь есть естественные олигосахариды грудного молока, что приближает смесь к идеалу - к грудному молоку. Также теперь отсутствует пальмовое масло.
+                p Новая формула базируется на изучении более 50 лет состава и свойств грудного молока. В составе смеси используется новая молочная основа, изменился жировой компонент (большое количество жирных кислот, отсутствует пальмовое масло).
+          .accordion
+            .accordion--button
+              p.accordion--button_text На каком молоке смесь Нутрилон комфорт?
+                span.icon
+            .accordion--content
+              .is_cascade
+                p В обновленной формуле Nutrilon Premium Nutribiotik (1,2) теперь есть естественные олигосахариды грудного молока, что приближает смесь к идеалу - к грудному молоку. Также теперь отсутствует пальмовое масло.
+                p Новая формула базируется на изучении более 50 лет состава и свойств грудного молока. В составе смеси используется новая молочная основа, изменился жировой компонент (большое количество жирных кислот, отсутствует пальмовое масло).
+          .accordion
+            .accordion--button
+              p.accordion--button_text Что входит в состав Нутрилон премиум?
+                span.icon
+            .accordion--content
+              .is_cascade
+                p В обновленной формуле Nutrilon Premium Nutribiotik (1,2) теперь есть естественные олигосахариды грудного молока, что приближает смесь к идеалу - к грудному молоку. Также теперь отсутствует пальмовое масло.
+                p Новая формула базируется на изучении более 50 лет состава и свойств грудного молока. В составе смеси используется новая молочная основа, изменился жировой компонент (большое количество жирных кислот, отсутствует пальмовое масло).
+          .accordion
+            .accordion--button
+              p.accordion--button_text Почему в смеси Нутрилон пальмовое масло?
+                span.icon
+            .accordion--content
+              .is_cascade
+                p В обновленной формуле Nutrilon Premium Nutribiotik (1,2) теперь есть естественные олигосахариды грудного молока, что приближает смесь к идеалу - к грудному молоку. Также теперь отсутствует пальмовое масло.
+                p Новая формула базируется на изучении более 50 лет состава и свойств грудного молока. В составе смеси используется новая молочная основа, изменился жировой компонент (большое количество жирных кислот, отсутствует пальмовое масло).
+
+    // contacts
+    .block.content_contacts
+      .block--wrapper
+        .contacts
+          .contacts--image
+            img(src="./assets/img/contacts/contacts-image.png")
+          .contacts--content
+            .contacts--title
+              h3 У вас остался вопрос  по кормлению ребенка?
+            .contacts--text
+              p Если вам требуется помощь, наши эксперты всегда готовы поддержать вас и ответить на интересующие вопросы, связанные с беременностью, питанием, развитием ребёнка.
+            .contacts--tel
+              a(href="tel:88002003388" target="_blank")
+                .icon-phone
+                span 8 800 200 33 88
+            .contacts--actions
+
+              .button.button-filled.button-accent
+                span Задать вопрос
+              .button.button-filled.button-primary
+                span Узнать об экспертах
+
+
+
+
