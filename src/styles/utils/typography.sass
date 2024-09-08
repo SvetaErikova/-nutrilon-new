@@ -20,14 +20,16 @@
 //  src: url("../fonts/Gotham_Pro/gothampro.ttf") format('opentype')
 
 html
-  font-size: clamp(16px, calc(16px + (18 - 16) * ((100vw - 1024px) / (1920 - 1024))), 18px)
+
+main
   line-height: 1.1
+  font-size: clamp(16px, calc(16px + (18 - 16) * ((100vw - 1024px) / (1920 - 1024))), 18px)
+
   font-family: 'gothampro', sans-serif
   //letter-spacing: -0.02em
   color: var(--c-text-default,#141A25)
   text-size-adjust: none
   -webkit-text-size-adjust: none
-
 
 h1
   font-size: clamp(40px, calc(40px + (72 - 40) * ((100vw - 375px) / (1920 - 375))), 72px)

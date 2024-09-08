@@ -31,8 +31,20 @@ function filtersProduct(block){
 
     });
   }
-
-
+  function cards_sort(){
+    let cards_not_hidden = block_product.querySelectorAll('.card:not(.hidden)')
+    for (let i = 6;  i < cards_not_hidden.length ; i++){
+      cards_not_hidden[i].classList.add('hidden')
+    }
+    if (block_product.querySelectorAll('.card:not(.hidden)').length < 1){
+      block_product.querySelector('.block--pagination').classList.add('hidden')
+      block_not_found.classList.add('show')
+    } else {
+      block_product.querySelector('.block--pagination').classList.remove('hidden')
+      block_not_found.classList.remove('show')
+    }
+  }
+  // cards_sort()
   block_tabs.forEach( tabs =>{
     let buttons = tabs.querySelectorAll('.button')
     buttons.forEach(btn=>{
@@ -41,17 +53,8 @@ function filtersProduct(block){
           t === e.currentTarget ? t.classList.add('is_active')  : t.classList.remove('is_active')
         })
         applyFilters()
-        let cards_not_hidden = block_product.querySelectorAll('.card:not(.hidden)')
-        for (let i = 6;  i < cards_not_hidden.length ; i++){
-          cards_not_hidden[i].classList.add('hidden')
-        }
-        if (block_product.querySelectorAll('.card:not(.hidden)').length < 1){
-          block_product.querySelector('.block--pagination').classList.add('hidden')
-          block_not_found.classList.add('show')
-        } else {
-          block_product.querySelector('.block--pagination').classList.remove('hidden')
-          block_not_found.classList.remove('show')
-        }
+        cards_sort()
+
       })
     })
     window.addEventListener('load', () => {

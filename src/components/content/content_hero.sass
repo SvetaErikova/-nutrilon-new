@@ -6,16 +6,16 @@
   &:before
     content: ''
     position: absolute
-    background-image: url("../img/hero/lens-mob.png")
+    background-image: url("../img/hero/lens-mob.webp")
     background-repeat: no-repeat
     background-position: bottom
     background-size: cover
     height: 70vh
     width: 100%
-    mix-blend-mode: screen
+    //mix-blend-mode: screen
     top: -60px
     @media(min-width: 998px)
-      background-image: url("../img/hero/lens.png")
+      background-image: url("../img/hero/lens.webp")
       height: 784px
       background-position: top
       background-size: contain
@@ -49,10 +49,10 @@
     &:before
       content: ''
       position: absolute
-      background-image: url("../img/hero/shield-mob.png")
+      background-image: url("../img/hero/shield-mob.webp")
       background-repeat: no-repeat
       background-size: cover
-      mix-blend-mode: screen
+      //mix-blend-mode: screen
       width: 100vw
       height: auto
       top: 40%
@@ -61,15 +61,17 @@
       background-position: center
       aspect-ratio: 375 / 585
       @media(min-width: 998px)
-        background-image: url("../img/hero/shield.png")
+        background-image: url("../img/hero/shield.webp")
         height: auto
         width: 250%
         left: -48%
-        top: -17%
+        top: -20%
         translate: 0 0
         background-position: center
         aspect-ratio: 1473/954
         background-size: contain
+        @media(min-width: 1200px)
+          top: -17%
     &-container
       position: relative
       display: flex
@@ -79,8 +81,10 @@
       clip-path: url(#mask-hero)
       aspect-ratio: 343/425
       @media(min-width: 998px)
-        width: calc(100% - 14px)
+        width: calc(100% - 11px)
         aspect-ratio: 635/787
+      @media(min-width: 1200px)
+        width: calc(100% - 14px)
 
 
 
@@ -118,25 +122,25 @@
     &:after
       content: ''
       position: absolute
-      background-image: url("../img/hero/cans-flare-mob.png")
+      background-image: url("../img/hero/cans-flare-mob.webp")
       background-repeat: no-repeat
       background-position: right
       background-size: contain
       left: 50%
       top: 50%
       translate: -50% -50%
-      mix-blend-mode: screen
+      //mix-blend-mode: screen
       width: 100vw
       aspect-ratio: 1148/1160
       height: auto
       @media(min-width: 998px)
-        background-image: url("../img/hero/cans-flare.png")
+        background-image: url("../img/hero/cans-flare.webp")
         left: 40%
         width: 200%
     &:before
       content: ''
       position: absolute
-      background-image: url("../img/hero/Ellipse.png")
+      background-image: url("../img/hero/Ellipse.webp")
       background-repeat: no-repeat
       background-position: right
       background-size: contain
